@@ -1,0 +1,127 @@
+:root {
+  --base-font-size: 1rem;
+  --spacer: 8px;
+
+  font-size: var(--base-font-size);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: calc(var(--spacer) * 2);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header {
+  margin-top: calc(var(--spacer) * 7);
+  margin-bottom: calc(var(--spacer) * 8);
+}
+
+h1 {
+  font-family: "PT Serif", serif;
+  font-size: 2.25rem;
+}
+
+.about {
+  margin-top: calc(var(--spacer) * 4);
+}
+
+.about h2 {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+.about p {
+  font-weight: 400;
+  margin-top: calc(var(--spacer) * 2);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacer) * 8);
+}
+
+.crew-member {
+  flex-basis: calc(50% - (var(--spacer) * 5));
+}
+
+.crew-member:nth-child(even) {
+  transform: translateY(20%);
+}
+
+.wrapper {
+  position: relative;
+  margin-bottom: calc(var(--spacer) * 2);
+}
+
+.wrapper__caption {
+  font-family: "PT Serif", serif;
+  font-size: 0.625rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(90deg) translate(100%, -16px);
+  transform-origin: right top;
+}
+
+footer {
+  color: #a9a9a9;
+  font-weight: 400;
+  margin-top: calc(var(--spacer) * 15);
+  text-align: center;
+}
+
+footer a {
+  color: inherit;
+}
+
+@media (min-width: 767px) {
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  header > * {
+    flex: 1;
+  }
+
+  .crew-member {
+    flex-basis: calc(33.33333% - (var(--spacer) * 8));
+  }
+
+  .crew-member:nth-child(even) {
+    transform: none;
+  }
+
+  .crew-member:nth-child(3n + 2) {
+    transform: translateY(20%);
+  }
+
+  .wrapper__caption {
+    font-size: 0.75rem;
+    transform: rotate(90deg) translate(100%, -24px);
+  }
+
+  .crew-member p {
+    font-size: 1.125rem;
+  }
+
+  footer {
+    margin-top: calc(var(--spacer) * 20);
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    gap: calc(var(--spacer) * 14);
+  }
+
+  .crew-member {
+    flex-basis: calc(33.33333% - (var(--spacer) * 14));
+  }
+}
